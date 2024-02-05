@@ -2,7 +2,7 @@
 
 #define LED_PIN 6
 #define NUM_LEDS 120
-#define BLINK_INTERVAL 30 //in seconds
+#define BLINK_INTERVAL 5 //in seconds
 
 Adafruit_NeoPixel strip(NUM_LEDS, LED_PIN, NEO_GRBW + NEO_KHZ800);
 
@@ -17,7 +17,7 @@ void loop() {
 
   if (millis() - lastUpdate >= (BLINK_INTERVAL*1000) / NUM_LEDS) {
     lastUpdate = millis();
-    strip.setPixelColor(currentPixel, strip.Color(random(210, 256), random(210, 256), 0, 0));
+    strip.setPixelColor(currentPixel, strip.Color(255, 255, 0, 0));
     strip.show();
     currentPixel++;
 
