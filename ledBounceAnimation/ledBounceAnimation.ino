@@ -20,7 +20,7 @@ void loop() {
     lastUpdate = millis();
 
     if (filling) {
-      strip.setPixelColor(currentPixel, strip.Color(255, 255, 0, 0));
+      strip.setPixelColor(currentPixel, strip.Color(0, 0, 0, 50));
       currentPixel++;
 
       if (currentPixel >= NUM_LEDS) {
